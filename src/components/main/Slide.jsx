@@ -5,7 +5,7 @@ const dxLogoPath = './assets/Group 8.svg';
 
 class Slide extends Component {
     downloadSourceCode = () => {
-        window.open('https://github.com/sedano', '_blank');
+        window.open('https://github.com/sedano/dx-oracle', '_blank');
     }
 
     renderInlineButtonGroup = () => {
@@ -20,7 +20,7 @@ class Slide extends Component {
     renderSourceDownload = () => {
         return (
             <div className="dx-intouch inline-group">
-                <Button type='ghost' onClick={this.downloadSourceCode}>Download source code</Button>
+                <Button type='ghost' onClick={this.downloadSourceCode}>View source code</Button>
                 <div><a href='https://sedano.me' rel='noopener' target='blank'>Personal Website</a></div>
             </div>
         );
