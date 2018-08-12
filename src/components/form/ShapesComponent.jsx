@@ -5,7 +5,7 @@ const Shape = (props) => {
     return (
         <Popover content={'You cliked me!'} title={props.text} trigger='click'>
             <div id={props.id} className='hexagon' style={{visibility: !props.icon ? 'hidden' : 'visible'}}>
-                <img src={`./assets/tile-icon-${props.icon}.svg`} alt={props.icon} />
+                <img src={`./assets/tile-icon-${props.icon || 'web'}.svg`} alt={props.icon} />
                 <div className='text'>{props.text}</div>
             </div>
         </Popover>
