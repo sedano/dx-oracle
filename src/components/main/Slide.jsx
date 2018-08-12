@@ -21,7 +21,7 @@ class Slide extends Component {
         return (
             <div className="dx-intouch inline-group">
                 <Button type='ghost' onClick={this.downloadSourceCode}>View source code</Button>
-                <div><a href='https://sedano.me' rel='noopener' target='blank'>Personal Website</a></div>
+                <div><a href='https://github.com/sedano/dx-oracle/archive/master.zip' rel='noopener' target='blank'>Download Source</a></div>
             </div>
         );
     }
