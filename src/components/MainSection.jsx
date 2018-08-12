@@ -57,7 +57,8 @@ class MainSection extends Component {
                     <Slide title='Improving user experiences to deliver business outcomes' className='slide' />
                     <Slide title="Alejandro Sedano DX Engineer test" personal={true} className='slide' />
                 </Carousel>
-                {this.renderOracleConsutingLogoGroup()};
+                {this.renderOracleConsutingLogoGroup()}
+                <div className='scroll-text'>Scroll to explore</div>
             </section>
         );
     }

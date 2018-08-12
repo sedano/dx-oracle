@@ -74,10 +74,21 @@ h1.header {
 .dx-slide-footer {
     position: absolute;
     left: 20px;
-    bottom: 24px;
+    bottom: 44px;
     color: #fff;
     opacity: 0.6;
     font-size: 1.15em;
+    font-family: 'HelveticaNeue-Light';
+}
+
+.scroll-text {
+    position: absolute;
+    text-align: center;
+    width: 100vw;
+    bottom: 20px;
+    color: #fff;
+    opacity: 0.6;
+    font-size: 1em;
     font-family: 'HelveticaNeue-Light';
 }
 
