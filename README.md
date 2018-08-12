@@ -4,7 +4,7 @@ This Microwebsite was bootstrapped with [Create React App](https://github.com/fa
 
 ## Live Preview
 
-Go to [dx.sedano.me](dx.sedano.me) to see a live preview of the website.
+Go to [https://sedano.me/dx-oracle](https://sedano.me/dx-oracle) to see a live preview of the website.
 
 ## Available Scripts
 
