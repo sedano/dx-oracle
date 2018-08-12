@@ -9,6 +9,7 @@ const oracleConsultingPath = './assets/Group 53.svg';
 const videoOptions = {
     src: './assets/video/dx-bg-video_web420.mp4',
     autoPlay: true,
+    playsInline: true,
     loop: true,
     muted: true,
     controls: false,
