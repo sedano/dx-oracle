@@ -23,12 +23,33 @@ const videoStyle = {
     left: 0,
     zIndex: -1,
     overflow: 'hidden',
+    backgroundColor: '#bb0000',
 };
 
 class MainSection extends Component {
     constructor(props) {
         super(props);
         this.carousel = React.createRef();
+        this.state = {
+            playBtn: 'block',
+        };
+    }
+
+    componentDidMount = () => {
+        this.video = document.getElementsByTagName('video')[0];
+        const {video} = this;
+        setTimeout(() => {
+            if (video.paused) {
+                video.play();
+            }
+        }, 100);
+    }
+
+    clickVideo = () => {
+        if (this.video) {
+            this.video.play();
+        }
+        this.setState({playBtn: 'none'});
     }
 
     componentDidMount() {
@@ -52,7 +73,9 @@ class MainSection extends Component {
     render() {
         return (
             <section className='main'>
-                <VideoCover videoOptions={videoOptions} style={videoStyle} />
+                <div onTouchStart={this.clickVideo}
+                    style={{position: 'fixed', width: '100vw', height: '100vh', zIndex: 1, display: this.state.playBtn}}></div>
+                <VideoCover videoOptions={videoOptions} style={videoStyle} ref={this.videoCover} />
                 <Carousel ref={this.carousel}>
                     <Slide title='Improving user experiences to deliver business outcomes' className='slide' />
                     <Slide title="Alejandro Sedano DX Engineer test" personal={true} className='slide' />
