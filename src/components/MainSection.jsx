@@ -37,12 +37,17 @@ class MainSection extends Component {
 
     componentDidMount = () => {
         this.video = document.getElementsByTagName('video')[0];
-        const {video} = this;
+        const {video, carousel} = this;
+
         setTimeout(() => {
             if (video.paused) {
                 video.play();
             }
         }, 100);
+
+        setInterval(() => {
+            carousel.current.next();
+        }, 5000);
     }
 
     clickVideo = () => {
@@ -50,12 +55,6 @@ class MainSection extends Component {
             this.video.play();
         }
         this.setState({playBtn: 'none'});
-    }
-
-    componentDidMount() {
-        setInterval(() => {
-            this.carousel.current.next();
-        }, 5000);
     }
 
     renderOracleConsutingLogoGroup = () => {
